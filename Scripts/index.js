@@ -10,6 +10,7 @@ let navbar = document.querySelector(".navbar");
 // window.addEventListener("scroll", () => {
 //   header.classList.toggle("shadow", window.scrollY > 100);
 // });
+// loki
 
 var myNav = document.getElementById('nav-menu');
 var myNav2 = document.getElementById('menu-icon');
