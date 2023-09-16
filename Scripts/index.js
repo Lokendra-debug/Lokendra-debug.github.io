@@ -1,16 +1,11 @@
 
 document.getElementById('home').style.height = `${window.innerHeight}px`;
-// document.getElementById('about').style.height = `${window.innerHeight}px`;
 
 
 let header = document.querySelector("header");
 let menu = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
-// window.addEventListener("scroll", () => {
-//   header.classList.toggle("shadow", window.scrollY > 100);
-// });
-// loki
 
 var myNav = document.getElementById('nav-menu');
 var myNav2 = document.getElementById('menu-icon');
@@ -19,10 +14,10 @@ window.onscroll = function () {
   if (document.documentElement.scrollTop >= 15) {
     myNav.classList.add("nav-colored");
     myNav2.classList.add("nav-colored");
-    // myNav.classList.remove("nav-transparent");
+    myNav.classList.remove("nav-transparent");
   }
   else {
-    // myNav.classList.add("nav-transparent");
+    myNav.classList.add("nav-transparent");
     myNav.classList.remove("nav-colored");
     myNav2.classList.remove("nav-colored");
   }
@@ -54,14 +49,14 @@ darkmode.onclick = () => {
 const resume = document.getElementById("resume-button-1");
 resume.onclick = (e) => {
   // e.preventDefault()
-  window.open("./Media/Lokendra_Resume.pdf", "_blank")
+  window.open("./Media/Lokendra_Singh_Resume.pdf", "_blank")
   // console.log("Click");
 }
 
 const containerResume = document.getElementById("resume-button-2");
 containerResume.onclick = (e) => {
   // e.preventDefault()
-  window.open("./Media/Lokendra_Resume.pdf", "_blank")
+  window.open("./Media/Lokendra_Singh_Resume.pdf", "_blank")
   // console.log("Click");
 }
 
@@ -104,14 +99,14 @@ function handleSubmit(e) {
 
   const data = {
     service_id: 'service_cud71u7',
-    template_id: 'template_ra4xl6w',
-    user_id: 'EwOkQK6gbyJk_IKps',
+    template_id: 'template_z5e44h9',
+    user_id: 'JifQZqT4RWnST7CtO',
     template_params: {
       'from_name': contactName.value,
       'to_name': 'Kishan',
       'message': contactMessage.value,
       'from_email': contactEmail.value,
-      'phone_number' : ContactPhoneNumber.value
+      'phone_number': ContactPhoneNumber.value
     }
   };
 
@@ -124,32 +119,32 @@ function handleSubmit(e) {
     },
     body: JSON.stringify(data)
   })
-  .then(res => {
+    .then(res => {
 
-    console.log('===>', res);
-    return res.text()
+      console.log('===>', res);
+      return res.text()
 
-  })
-  .then(data => {
+    })
+    .then(data => {
 
-    console.log('=====>', data);
+      console.log('=====>', data);
 
-    if(data=='OK'){
-      alert('Message Send Successfully.')
-    }else{
-      alert('Something Went Wrong! (Try After Some Time)')
-    }
+      if (data == 'OK') {
+        alert('Message Send Successfully.')
+      } else {
+        alert('Internal Server Error.')
+      }
 
-  })
-  .catch(err => {
+    })
+    .catch(err => {
 
-    console.log(err);
+      console.log(err);
 
-  })
-  .finally(() => {
-    document.getElementById('contactSubmit').innerHTML = `Send`
-    document.getElementById('contactSubmit').disabled = false;
-  })
+    })
+    .finally(() => {
+      document.getElementById('contactSubmit').innerHTML = `Send`
+      document.getElementById('contactSubmit').disabled = false;
+    })
 
 }
 
@@ -158,30 +153,18 @@ function handleSubmit(e) {
 
 
 
-  // typing text animation script
-  // var typed = new Typed(".typing1", {
-  //   strings: ['Full Stack Web Developer',"Node Js Backend Developer", "Day Dreamer"],
-  //   typeSpeed: 100,
-  //   backSpeed: 60,
-  //   loop: true,
-  // });
+const typed = new Typed('.typing1', {
+  strings: ['', 'Full Stack Web Developer', 'Backend Developer', 'Frontend Developer', 'MERN Stack Developer'],
+  typeSpeed: 100,
+  backSpeed: 60,
+  backdelay: 10000,
+  loop: true
+})
 
-  const typed = new Typed('.typing1', {
-    strings: ['','Full Stack Web Developer', 'Node Js Backend Developer', 'Frontend Developer', 'Day Dreamer'],
-    typeSpeed: 100,
-    backSpeed: 60,
-    backdelay: 10000,
-    loop: true
-  })
-
-  const colors = ['red', '#007bff', 'orange', 'magenta', 'cyan', '#0078ff']
-  setInterval(()=>{
-    document.querySelector('.typing1').style.color = colors[Math.floor(Math.random()*(colors.length))]
-  },2000)
+const colors = ['red', '#007bff', 'orange', 'magenta', 'cyan', '#0078ff']
+setInterval(() => {
+  document.querySelector('.typing1').style.color = colors[Math.floor(Math.random() * (colors.length))]
+}, 2000)
 
 
-
-  // setInterval(()=>{
-  //   document.querySelector('.logo').style.color = colors[Math.floor(Math.random()*(colors.length))]
-  // },1000)
 
