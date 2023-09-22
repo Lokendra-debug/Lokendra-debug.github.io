@@ -49,14 +49,14 @@ darkmode.onclick = () => {
 const resume = document.getElementById("resume-button-1");
 resume.onclick = (e) => {
   // e.preventDefault()
-  window.open("./Media/Lokendra_Singh_Resume.pdf", "_blank")
+  window.open("./Media/Lokendra-Singh-Resume.pdf", "_blank")
   // console.log("Click");
 }
 
 const containerResume = document.getElementById("resume-button-2");
 containerResume.onclick = (e) => {
   // e.preventDefault()
-  window.open("./Media/Lokendra_Singh_Resume.pdf", "_blank")
+  window.open("./Media/Lokendra-Singh-Resume.pdf", "_blank")
   // console.log("Click");
 }
 
@@ -98,12 +98,12 @@ function handleSubmit(e) {
   console.log([contactName.value, contactEmail.value, contactMessage.value]);
 
   const data = {
-    service_id: 'service_cud71u7',
-    template_id: 'template_z5e44h9',
-    user_id: 'JifQZqT4RWnST7CtO',
+    service_id: 'service_e09h4gv',
+    template_id: 'template_q9df3mm',
+    user_id: 'Jf0Wy_EhUzIsRpAwjN',
     template_params: {
       'from_name': contactName.value,
-      'to_name': 'Kishan',
+      'to_name': 'Lokendra Singh',
       'message': contactMessage.value,
       'from_email': contactEmail.value,
       'phone_number': ContactPhoneNumber.value
